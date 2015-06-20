@@ -4,7 +4,9 @@
   "description": "gist backend (model) weblog",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ember server",
+    "build": "ember build",
+    "test": "ember test"
   },
   "repository": {
     "type": "git",
@@ -20,11 +22,6 @@
     "doc": "doc",
     "test": "tests"
   },
-  "scripts": {
-    "start": "ember server",
-    "build": "ember build",
-    "test": "ember test"
-  },
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -33,6 +30,7 @@
     "ember-cli": "0.2.7",
     "ember-cli-app-version": "0.3.3",
     "ember-cli-babel": "^5.0.0",
+    "ember-cli-coffeescript": "0.11.0",
     "ember-cli-content-security-policy": "0.4.0",
     "ember-cli-dependency-checker": "^1.0.0",
     "ember-cli-htmlbars": "0.7.6",
