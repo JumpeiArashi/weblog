@@ -1,8 +1,7 @@
 `import DS from 'ember-data'`
 
-Author = DS.Model.extend
+User = DS.Model.extend
   login: DS.attr()
-  id: DS.attr()
   avatar_url: DS.attr()
   gravatar_id: DS.attr()
   url: DS.attr()
@@ -32,4 +31,4 @@ Author = DS.Model.extend
   created_at: DS.attr()
   updated_at: DS.attr()
 
-`export default Author`
+`export default User`

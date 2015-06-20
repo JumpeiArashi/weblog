@@ -59,5 +59,5 @@ module.exports = function(app) {
     res.status(204).end();
   });
 
-  app.use('/user', authorRouter);
+  app.use('/users', authorRouter);
 };

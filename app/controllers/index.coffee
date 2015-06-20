@@ -3,7 +3,7 @@
 IndexController = Ember.Controller.extend(
   needs: [
     'articles'
-    'author'
+    'user'
   ]
 )
 
