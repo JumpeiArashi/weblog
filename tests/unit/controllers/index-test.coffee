@@ -1,8 +1,10 @@
 `import { test, moduleFor } from 'ember-qunit'`
 
 moduleFor 'controller:index', {
-  # Specify the other units that are required for this test.
-  # needs: ['controller:foo']
+  needs: [
+    'controller:articles'
+    'controller:user'
+  ]
 }
 
 # Replace this with your real tests.
