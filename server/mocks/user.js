@@ -1,18 +1,18 @@
 module.exports = function(app) {
   var express = require('express');
-  var authorRouter = express.Router();
+  var userRouter = express.Router();
 
-  authorRouter.get('/', function(req, res) {
+  userRouter.get('/', function(req, res) {
     res.send({
-      'author': []
+      'user': []
     });
   });
 
-  authorRouter.post('/', function(req, res) {
+  userRouter.post('/', function(req, res) {
     res.status(201).end();
   });
 
-  authorRouter.get('/:id', function(req, res) {
+  userRouter.get('/:id', function(req, res) {
     res.send({
       id: 1,
       login: "octocat",
@@ -47,17 +47,17 @@ module.exports = function(app) {
     });
   });
 
-  authorRouter.put('/:id', function(req, res) {
+  userRouter.put('/:id', function(req, res) {
     res.send({
-      'author': {
+      'user': {
         id: req.params.id
       }
     });
   });
 
-  authorRouter.delete('/:id', function(req, res) {
+  userRouter.delete('/:id', function(req, res) {
     res.status(204).end();
   });
 
-  app.use('/users', authorRouter);
+  app.use('/users', userRouter);
 };
