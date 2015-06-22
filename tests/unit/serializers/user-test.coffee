@@ -1,6 +1,6 @@
 `import { test, moduleForModel } from 'ember-qunit'`
 
-moduleForModel 'serializer:user',
+moduleForModel 'user',
   # Specify the other units that are required for this test.
   needs: ['serializer:user']
 
