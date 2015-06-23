@@ -1,7 +1,7 @@
-#`import ApplicationAdapter from './application'`
 `import DS from 'ember-data'`
+`import config from 'weblog/config/environment'`
 
 GistAdapter = DS.RESTAdapter.extend
-  namespace: 'users/JumpeiArashi'
+  namespace: "users/#{config.APP.author}"
 
 `export default GistAdapter`
