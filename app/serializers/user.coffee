@@ -6,6 +6,24 @@ UserSerializer = DS.RESTSerializer.extend
       user: payload
     return @_super store, typeClass, payload, id
 
+  extractFindBelongsTo: (store, typeClass, payload, id) ->
+    delete payload.company
+    delete payload.blog
+    delete payload.location
+    delete payload.email
+    delete payload.hireable
+    delete payload.bio
+    delete payload.public_repos
+    delete payload.public_gists
+    delete payload.followers
+    delete payload.following
+    delete payload.created_at
+    delete payload.updated_at
+
+    payload =
+      user: payload
+    return @_super store, typeClass, payload, id
+
   extractArray: (store, primaryTypeClass, rawPayload) ->
     for entry in rawPayload
       delete entry.company
