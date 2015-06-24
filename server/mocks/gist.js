@@ -32,15 +32,15 @@ module.exports = function(app) {
             "site_admin": false
           },
           "user": null,
-        //"files": {
-        //  "ring.erl": {
-        //    "size": 932,
-        //    "raw_url": "https://gist.githubusercontent.com/raw/365370/8c4d2d43d178df44f4c03a7f2ac0ff512853564e/ring.erl",
-        //    "type": "text/plain",
-        //    "truncated": false,
-        //    "language": "Erlang"
-        //  }
-        //},
+          "files": {
+            "ring.erl": {
+              "size": 932,
+              "raw_url": "https://gist.githubusercontent.com/raw/365370/8c4d2d43d178df44f4c03a7f2ac0ff512853564e/ring.erl",
+              "type": "text/plain",
+              "truncated": false,
+              "language": "Erlang"
+            }
+          },
           "comments": 0,
           "comments_url": "https://api.github.com/gists/aa5a315d61ae9438b18d/comments/",
           "html_url": "https://gist.github.com/aa5a315d61ae9438b18d",

@@ -24,6 +24,16 @@ GistSerializer = DS.RESTSerializer.extend(
     for entry in rawPayload
       delete entry.forks
       delete entry.history
+
+      # `files` is strange structure for emberjs
+      files = []
+      for filename, values of entry.files
+        record = {}
+        record.name = filename
+        (record[key] = value for key, value of values)
+      files.push record
+      entry.files = files
+
     payload =
       gist: rawPayload
 
