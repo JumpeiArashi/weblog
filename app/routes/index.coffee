@@ -7,6 +7,6 @@ IndexRoute = Ember.Route.extend
     controller.set 'user', user
 
     articles = @store.findAll 'gist'
-    controller.set 'articles', articles
+    controller.set 'gists', articles
 
 `export default IndexRoute`

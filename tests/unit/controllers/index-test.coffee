@@ -2,7 +2,7 @@
 
 moduleFor 'controller:index', {
   needs: [
-    'controller:articles'
+    'controller:gists'
     'controller:user'
   ]
 }
