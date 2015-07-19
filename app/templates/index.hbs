@@ -1,1 +1,16 @@
-{{outlet}}
+<div class="container">
+  {{outlet}}
+  <div class="frame-plane author">
+    <div class ="frame-inner">
+      <img class="author-icon" src="{{user.avatar_url}}"><a class="author-link" href="{{user.url}}">{{user.login}}</a>
+    </div>
+  </div>
+  {{#each gist in gists}}
+  <div class="frame-plane gist">
+    <div class="frame-inner">
+      {{gist.description}}
+      <div><span class="pull-right gist-updated_at">{{gist.updated_at}}</span></div><div class="clearfix"></div>
+    </div>
+  </div>
+  {{/each}}
+</div>
