@@ -31,7 +31,7 @@ GistSerializer = DS.RESTSerializer.extend(
         record = {}
         record.name = filename
         (record[key] = value for key, value of values)
-      files.push record
+        files.push record
       entry.files = files
 
     payload =
