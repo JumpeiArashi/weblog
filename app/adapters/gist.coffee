@@ -3,6 +3,7 @@
 
 GistAdapter = DS.RESTAdapter.extend
   host: config.APP.api.host
-  namespace: "users/#{config.APP.author}"
+  urlForFindAll: (modelName) ->
+    return "#{@host}/users/#{config.APP.author}/gists"
 
 `export default GistAdapter`
