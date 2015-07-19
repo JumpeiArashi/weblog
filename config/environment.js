@@ -17,8 +17,15 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       author: 'JumpeiArashi',
-      gistUsername: 'weblog-JumpeiArashi'
+      gistUsername: 'weblog-JumpeiArashi',
+      api: {
+        host: 'https://api.github.com'
+      }
     }
+  };
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' https://gist.githubusercontent.com https://api.github.com",
+    'style-src': "'self' 'unsafe-inline'"
   };
 
   if (environment === 'development') {
@@ -27,6 +34,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    //ENV.APP.api.host = 'http://localhost:4200';
   }
 
   if (environment === 'test') {
