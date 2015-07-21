@@ -1,5 +1,5 @@
 `import Ember from 'ember'`
 
-ArticleController = Ember.Controller.extend()
+GistController = Ember.Controller.extend()
 
-`export default ArticleController`
+`export default GistController`
