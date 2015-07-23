@@ -15,10 +15,18 @@ GistSerializer = DS.RESTSerializer.extend(
     history:
       serialize: false
       deserialize: 'records'
-  extractSingle: (store, typeClass, payload, id) ->
-    payload =
-      gist: payload
-    return @_super store, typeClass, payload, id
+  extractSingle: (store, typeClass, rawPayload, id) ->
+    files = []
+    for filename, values of rawPayload.files
+      record = {}
+      record.name = filename
+      (record[key] = value for key, value of values)
+      files.push record
+    rawPayload.files = files
+
+    rawPayload =
+      gist: rawPayload
+    return @_super store, typeClass, rawPayload, id
 
   extractArray: (store, primaryTypeClass, rawPayload) ->
     for entry in rawPayload
