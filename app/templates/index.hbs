@@ -2,11 +2,11 @@
   {{outlet}}
   <div class="frame-plane pull-left">
     <div class ="frame-inner">
-      <img class="author-icon" src="{{user.avatar_url}}"><a class="author-link" href="{{user.url}}">{{user.login}}</a>
+      <img class="author-icon" src="{{model.user.avatar_url}}"><a class="author-link" href="{{model.user.url}}">{{model.user.login}}</a>
     </div>
   </div>
   <div class="clearfix"></div>
-  {{#each gist in gists}}
+  {{#each gist in model.gists}}
   <div class="frame-plane gist-description">
     <div class="frame-inner">
       {{#link-to 'gist' gist.id}}{{gist.description}}{{/link-to}}

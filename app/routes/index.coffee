@@ -2,11 +2,9 @@
 `import Ember from 'ember'`
 
 IndexRoute = Ember.Route.extend
-  setupController: (controller, model) ->
-    user = @store.find 'user', config.APP.author
-    controller.set 'user', user
-
-    gists = @store.findAll 'gist'
-    controller.set 'gists', gists
+  model: (params) ->
+    return Ember.RSVP.hash
+      user: @store.find 'user', config.APP.author
+      gists: @store.findAll 'gist'
 
 `export default IndexRoute`
