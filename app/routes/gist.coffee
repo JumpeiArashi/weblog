@@ -2,7 +2,7 @@
 
 GistsRoute = Ember.Route.extend
   model: (params) ->
-    return @store.find 'gist', params.gist_id
+    return @store.fetchById 'gist', params.gist_id
 
   setupController: (controller, model) ->
     controller.set 'gist', model
