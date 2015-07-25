@@ -59,9 +59,13 @@
 
 //frames
 
-.frame-plane {
-  border-image: url('/assets/images/frame-plane.png') 32 repeat;
+.frame (@flavor: 'plane') {
+  border-image: url("/assets/images/frame-@{flavor}.png") 32 repeat;
   border-image-width: 16px;
+}
+
+.frame-plane {
+  .frame;
   display: inline-block;
 }
 
@@ -108,8 +112,7 @@
 }
 
 .frame-gist-content {
-  border-image: url('/assets/images/frame-plane.png') 32 repeat;
-  border-image-width: 16px;
+  .frame;
 }
 
 //loading
@@ -120,8 +123,7 @@
 }
 
 .frame-loading {
-  border-image: url('/assets/images/frame-plane.png') 32 repeat;
-  border-image-width: 16px;
+  .frame;
 }
 
 .loading-icon {
@@ -135,8 +137,7 @@
 }
 
 .frame-error {
-  border-image: url('/assets/images/frame-strawberry.png') 32 repeat;
-  border-image-width: 16px;
+  .frame('strawberry');
 }
 
 .frame-error-inner {
