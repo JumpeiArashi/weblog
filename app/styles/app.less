@@ -114,10 +114,36 @@
   border: none;
 }
 
+//loading
+
 .loading {
   font-family: 'status';
+  text-align: center;
+}
+
+.frame-loading {
+  border-image: url('/assets/images/frame-plane.png') 32 repeat;
+  border-image-width: 16px;
 }
 
 .loading-icon {
   margin-right: 17px;
+}
+
+//error
+
+.error {
+  font-family: 'status';
+}
+
+.frame-error {
+  border-image: url('/assets/images/frame-strawberry.png') 32 repeat;
+  border-image-width: 16px;
+}
+
+.frame-error-inner {
+  margin: 13px;
+  padding: 8px;
+  color: tomato;
+  background-color: black;
 }

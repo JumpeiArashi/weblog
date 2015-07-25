@@ -5,6 +5,7 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map () ->
-  @resource 'gist', {path: '/:gist_id'}
+  @resource 'gist', {path: '/gists/:gist_id'}
+  @route 'error', {path: '/error/:error_message'}
 
 `export default Router`
