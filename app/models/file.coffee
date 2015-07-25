@@ -8,5 +8,6 @@ File = DS.Model.extend
   language: DS.attr()
   truncated: DS.attr()
   content: DS.attr()
+  htmlContent: DS.attr()
 
 `export default File`
