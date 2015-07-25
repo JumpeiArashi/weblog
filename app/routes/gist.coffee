@@ -11,7 +11,8 @@ GistRoute = Ember.Route.extend
       firstFile = gist.get('files').get('firstObject')
       
       xhr = new XMLHttpRequest()
-      xhr.open 'POST', 'https://api.github.com/markdown'
+      xhr.open 'POST', 'https://api.github.com/markdown/raw'
+      xhr.setRequestHeader 'Content-Type', 'text/x-markdown'
 
       xhr.onload = (e) ->
         if xhr.status is 200
@@ -23,10 +24,7 @@ GistRoute = Ember.Route.extend
       xhr.onerror = (e) ->
         reject new Ember.Error 'Sorry... Backend API connection error occurred...'
 
-      requestBody =
-        text: firstFile.get 'content'
-        mode: 'gfm'
-      xhr.send JSON.stringify requestBody
+      xhr.send firstFile.get 'content'
 
   setupController: (controller, model) ->
     controller.set 'gist', model
